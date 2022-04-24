@@ -22,8 +22,6 @@ module Actions
           params.require(:token).permit(:first_name, :last_name)
         end
 
-        pp res
-
         res.error? ? Failure(:deserialize) : res
       end
     end

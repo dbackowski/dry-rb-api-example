@@ -1,11 +1,11 @@
 class TokensController < ApplicationController
   def create
-    call_action(create_payment_profile)
+    call_action(create_token)
   end
 
   private
 
-  def create_payment_profile
+  def create_token
     Actions::CreateToken::Action.new
   end
 end
